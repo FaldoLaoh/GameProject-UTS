@@ -6,16 +6,16 @@ td{
 }
 body{
     margin-top: 0%;
-    background-color: #4559d3;
+    background-color: #4b2142;
 }
 #playBox{
     margin-left: 40%;
 }
 .white{
-    background-color: antiquewhite;
+    background-color: #97EAD2;
 }
 .pink{
-    background-color: hotpink;
+    background-color: #816E94;
 }
 #l1{
     position: absolute;
@@ -70,11 +70,11 @@ body{
     height: 60px;
     width: 275px;
     text-align: center;
-    border: solid floralwhite 4px;
+    border: solid floralwhite 2px;
     font-size: xx-large;
     font-weight: bold;
-    background-color: deeppink;
-    color: floralwhite;
+    background-color: #8CC7A1;
+    color: #4b2142;
     border-radius: 22px;
     margin-top: 14px;
     font-family: monospace;
@@ -116,7 +116,7 @@ body{
     cursor: pointer;
 }
 
-#image_slide{
+#thumbnailKece{
     position: absolute;
     top: 30%;
     width: 460px;
@@ -126,10 +126,12 @@ body{
     flex-direction: column;
     border-radius: 68px;
     border: solid 6px floralwhite;
+    background-color: #260303;
 }
 #poster{
     height: 100%;
-    width: 100%;
+    width: 50%;
+    padding-left: 25%;
 }
 #dice{
     position: absolute;

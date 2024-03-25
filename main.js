@@ -2,37 +2,23 @@ for(var i=1;i<=100;i++){
     document.getElementById(i).innerHTML=i;
 }
 
-//image slider
-
-var arr=['<img src="i8.png" id="poster">','<img src="i4.jfif" id="poster">','<img src="i10.png" id="poster">','<img src="i2.jpg" id="poster">'];
 
 var dice=['<img src="1.png">','<img src="2.png">','<img src="3.png">','<img src="4.png">','<img src="5.png">','<img src="6.png">'];
-
-var turn=0;
-setInterval(() => {
-    turn++;
-    if(turn==4){
-        turn=0;
-    }
-    document.getElementById('image_slide').innerHTML=arr[turn];
-}, 3000);
-
-
 var p1,p2,p3,p4;
 
 //functionality of ludo
-var game_type;
+var jumlahPemain;
 function choose_player(){
-      game_type=prompt('choose Game TYPE');
-      if(game_type==2){
-          document.getElementById('image_slide').style.visibility='hidden';
+    jumlahPemain=prompt('Pilih Jumlah Pemain');
+      if(jumlahPemain==2){
+          document.getElementById('thumbnailKece').style.visibility='hidden';
           document.getElementById("player1").style.visibility='visible';
           document.getElementById("player2").style.visibility='visible';
           document.getElementById("dice").style.visibility='visible';
           document.getElementById('choose_player').removeAttribute('onclick');
       }
-      else if(game_type==3){
-          document.getElementById('image_slide').style.visibility='hidden';
+      else if(jumlahPemain==3){
+          document.getElementById('thumbnailKece').style.visibility='hidden';
           document.getElementById("player1").style.visibility='visible';
           document.getElementById("player2").style.visibility='visible';
           document.getElementById("player3").style.visibility='visible';
@@ -41,8 +27,8 @@ function choose_player(){
           document.getElementById("dice").style.visibility='visible';
           document.getElementById('choose_player').removeAttribute('onclick');
       }
-      else if(game_type==4){
-          document.getElementById('image_slide').style.visibility='hidden';
+      else if(jumlahPemain==4){
+          document.getElementById('thumbnailKece').style.visibility='hidden';
           document.getElementById("player1").style.visibility='visible';
           document.getElementById("player2").style.visibility='visible';
           document.getElementById("player3").style.visibility='visible';
@@ -56,7 +42,7 @@ function choose_player(){
 
       else{
           alert('please choose valid no. of player. choose the no. 2,3 or 4 !!');
-          game_type=undefined;
+          jumlahPemain=undefined;
       }
 
 }
@@ -64,11 +50,11 @@ function choose_player(){
 //start function
 
 function start(){
-    if(game_type==undefined){
+    if(jumlahPemain==undefined){
         alert('FIRST CHOOSE THE TYPE OF GAME !!');
     }
     else{
-        if(game_type==2){
+        if(jumlahPemain==2){
             if(document.getElementById('select1').value==document.getElementById('select2').value){
                 alert("please select two different color !!");
             }
@@ -92,7 +78,7 @@ function start(){
            
         }
 
-        else if(game_type==3){
+        else if(jumlahPemain==3){
             if(document.getElementById('select1').value==document.getElementById('select2').value || document.getElementById('select1').value==document.getElementById('select3').value || document.getElementById('select2').value==document.getElementById("select3").value){
                 alert("please select  different color !!");
             }
@@ -141,7 +127,7 @@ function play(){
     var random_no=Math.floor(Math.random()*6);
     document.getElementById("dice").innerHTML=dice[random_no];
     //2 player game
-    if(game_type==2){
+    if(jumlahPemain==2){
         if(my_turn==0){
             if(previousFirst>0){
                 if(100-previousFirst<random_no+1){
@@ -197,7 +183,7 @@ function play(){
 
     //3 player game
 
-    else if(game_type==3){
+    else if(jumlahPemain==3){
         if(my_turn==0){
             if(previousFirst>0){
                 if(100-previousFirst<random_no+1){
@@ -275,7 +261,7 @@ function play(){
 
     // 4 player game
 
-    else if(game_type==4){
+    else if(jumlahPemain==4){
 
         if(my_turn==0){
             if(previousFirst>0){
