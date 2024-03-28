@@ -55,27 +55,27 @@ function start(){
     }
     else{
         if(jumlahPemain==2){
-            p1=document.getElementById("select1");
-            p2=document.getElementById("select2");
+            p1=document.getElementById("red")
+            p2=document.getElementById("green");
 
            }
         else if(jumlahPemain==3){
-            p1=document.getElementById("select1");
-            p2=document.getElementById("select2");
-            p3=document.getElementById("select3");
+            p1=document.getElementById("red");
+            p2=document.getElementById("green");
+            p3=document.getElementById("yellow");
         }
         else{
             document.getElementById("play").innerHTML='PLAY';
-            document.getElementById("select1").setAttribute("disabled","disabled");
-            document.getElementById("select2").setAttribute("disabled","disabled");
-            document.getElementById("select3").setAttribute("disabled","disabled");
-            document.getElementById("select4").setAttribute("disabled","disabled");
+            document.getElementById("red").setAttribute("disabled","disabled");
+            document.getElementById("green").setAttribute("disabled","disabled");
+            document.getElementById("yellow").setAttribute("disabled","disabled");
+            document.getElementById("blue").setAttribute("disabled","disabled");
         }
         document.getElementById("play").setAttribute("onclick","play()");
-    p1=document.getElementById("select1").value;
-    p2=document.getElementById("select2").value;
-    p3=document.getElementById("select3").value;
-    p4=document.getElementById("select4").value;
+    p1=document.getElementById("red").style.color='red';
+    p2=document.getElementById("green").style.color='green';
+    p3=document.getElementById("yellow").style.color='yellow';
+    p4=document.getElementById("blue").style.color='blue';
     }
 }
 
@@ -98,11 +98,11 @@ function play(){
                 }
                 else{
                 document.getElementById((previousFirst).toString()).innerHTML=previousFirst;
-                document.getElementById((previousFirst).toString()).style.color='red';
+                document.getElementById((previousFirst).toString()).style.color='black';
                 }
                 }
-          document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece1.jpg' style='width: 30px; height: 30px;'>";
-          document.getElementById((previousFirst+random_no+1).toString()).style.color='red';
+          document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=;font-size:xx-large;></i>";
+          document.getElementById((previousFirst+random_no+1).toString()).style.color=p1;
           if((previousFirst+random_no+1)==100){
               setTimeout(() => {
                   alert("player1 is winner !!");
@@ -127,8 +127,8 @@ function play(){
                 document.getElementById((previousSec).toString()).style.color='black';
                 }
                 }
-                document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece2.jpg' style='width: 30px; height: 30px;'>";
-                document.getElementById((previousSec+random_no+1).toString()).style.color='Green';
+            document.getElementById((previousSec+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=font-size:xx-large;></i>";
+            document.getElementById((previousSec+random_no+1).toString()).style.color=p2;
             if((previousSec+random_no+1)==100){
                 setTimeout(() => {
                     alert("player2 is winner !!");
@@ -156,8 +156,8 @@ function play(){
                 document.getElementById((previousFirst).toString()).style.color='black';
                 }
                 }
-                document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece1.jpg' style='width: 30px; height: 30px;'>";
-                document.getElementById((previousFirst+random_no+1).toString()).style.color='red';
+          document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=;font-size:xx-large;></i>";
+          document.getElementById((previousFirst+random_no+1).toString()).style.color=p1;
           if((previousFirst+random_no+1)==100){
               setTimeout(() => {
                   alert("player1 is winner !!");
@@ -181,8 +181,8 @@ function play(){
                 document.getElementById((previousSec).toString()).style.color='black';
                 }
                 }
-                document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece2.jpg' style='width: 30px; height: 30px;'>";
-                document.getElementById((previousSec+random_no+1).toString()).style.color='green';
+            document.getElementById((previousSec+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=font-size:xx-large;></i>";
+            document.getElementById((previousSec+random_no+1).toString()).style.color=p2;
             if((previousSec+random_no+1)==100){
                 setTimeout(() => {
                     alert("player2 is winner !!");
@@ -205,8 +205,8 @@ function play(){
                 document.getElementById((previousThird).toString()).style.color='black';
                 }
                 }
-                document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece3.jpg' style='width: 30px; height: 30px;'>";
-                document.getElementById((previousThird+random_no+1).toString()).style.color='yellow';
+            document.getElementById((previousThird+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=font-size:xx-large;></i>";
+            document.getElementById((previousThird+random_no+1).toString()).style.color=p3;
             if((previousThird+random_no+1)==100){
                 setTimeout(() => {
                     alert("player3 is winner !!");
@@ -235,8 +235,8 @@ function play(){
                 document.getElementById((previousFirst).toString()).style.color='black';
                 }
                 }
-                document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece1.jpg' style='width: 30px; height: 30px;'>";
-                document.getElementById((previousFirst+random_no+1).toString()).style.color=p1;
+          document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=;font-size:xx-large;></i>";
+          document.getElementById((previousFirst+random_no+1).toString()).style.color=p1;
           if((previousFirst+random_no+1)==100){
               setTimeout(() => {
                   alert("player1 is winner !!");
@@ -260,8 +260,8 @@ function play(){
                 document.getElementById((previousSec).toString()).style.color='black';
                 }
                 }
-                document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece2.jpg' style='width: 30px; height: 30px;'>";
-                document.getElementById((previousSec+random_no+1).toString()).style.color=p2;
+            document.getElementById((previousSec+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=font-size:xx-large;></i>";
+            document.getElementById((previousSec+random_no+1).toString()).style.color=p2;
             if((previousSec+random_no+1)==100){
                 setTimeout(() => {
                     alert("player2 is winner !!");
@@ -284,8 +284,8 @@ function play(){
                 document.getElementById((previousThird).toString()).style.color='black';
                 }
                 }
-                document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece3.jpg' style='width: 30px; height: 30px;'>";
-                document.getElementById((previousThird+random_no+1).toString()).style.color=p3;
+            document.getElementById((previousThird+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=font-size:xx-large;></i>";
+            document.getElementById((previousThird+random_no+1).toString()).style.color=p3;
             if((previousThird+random_no+1)==100){
                 setTimeout(() => {
                     alert("player3 is winner !!");
@@ -309,8 +309,8 @@ function play(){
                 document.getElementById((previousFourth).toString()).style.color='black';
                 }
                 }
-                document.getElementById((previousFirst+random_no+1).toString()).innerHTML="<img src='playerKece4.jpg' style='width: 30px; height: 30px;'>";
-                document.getElementById((previousFourth+random_no+1).toString()).style.color=p4;
+            document.getElementById((previousFourth+random_no+1).toString()).innerHTML="<i class='fas fa-chess-pawn' style=font-size:xx-large;></i>";
+            document.getElementById((previousFourth+random_no+1).toString()).style.color=p4;
             if((previousFourth+random_no+1)==100){
                 setTimeout(() => {
                     alert("player4 is winner !!");
